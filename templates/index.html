@@ -1,12 +1,12 @@
 {% include 'cabecalho.html' %}
 <body>
-	<img src="/static/img/tibia.png" width="25%">
+	<img src="/static/img/logo.png" width="25%">
 	<hr>
 	{% block conteudo %}
 	
 	
 	
-	<p>{% set personagem1 = personagem(nome='Arqueiro das Sombas,vocacao='Paladin',nivel=32) %}</p>
+	<p>{% set personagem1 = personagem(nome='Arqueiro das Sombas',vocacao='Paladin',nivel=32) %}</p>
 	<p>{{ personagem1.nome }}</p>
 	<p>{{ personagem1.vocacao }}</p>
 	<p>{{ personagem1.nivel }}</p>
