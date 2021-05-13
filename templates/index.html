@@ -1,0 +1,23 @@
+{% include 'cabecalho.html' %}
+<body>
+	<img src="/static/img/tibia.png" width="25%">
+	<hr>
+	{% block conteudo %}
+	
+	
+	
+	<p>{% set personagem1 = personagem(nome='Arqueiro das Sombas,vocacao='Paladin',nivel=32) %}</p>
+	<p>{{ personagem1.nome }}</p>
+	<p>{{ personagem1.vocacao }}</p>
+	<p>{{ personagem1.nivel }}</p>
+	<p>{{ personagem1.getVocacao() }}</p>
+	<p>{% set personagem2 = personagem(nome='Mordoc Cery',vocacao='Knight',nivel=19) %}</p>
+	<p>{{ personagem2.getNome() }}</p>
+	<p>{{ personagem2.mensagem(nome=personagem2.getNome(),vocacao=personagem2.getVocacao(),nivel=personagem2.getNivel()) }}</p>
+	<p>{{ personagem2.promover(nivel=personagem2.getNivel(),vocacao=personagem2.getVocacao()) }}</p>
+
+
+	{% endblock %}
+</body>
+{% include 'rodape.html' %}
+	
